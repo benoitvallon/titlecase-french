@@ -1,0 +1,28 @@
+{
+  "name": "titlecase-french",
+  "version": "0.0.1",
+  "description": "Titlecase converter for french",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "lint": "eslint .; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benoitvallon/titlecase-french.git"
+  },
+  "keywords": [
+    "titlecase",
+    "title",
+    "case",
+    "title-case",
+    "french"
+  ],
+  "author": "Benoit VALLON <benoitvallon@gmail.com> (http://blog.benoitvallon.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "eslint": "^1.9.0",
+    "mocha": "^2.3.3"
+  }
+}
