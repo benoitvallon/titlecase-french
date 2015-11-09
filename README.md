@@ -1,5 +1,7 @@
 # Title Case for French
 
+[![Build Status](https://travis-ci.org/benoitvallon/titlecase-french.svg)](https://travis-ci.org/benoitvallon/titlecase-french)
+
 # What is title case?
 
 Basically it is using "Capital and Lowercase Letters in Title". This means only using capital letters for the principal words. Articles, conjunctions, and prepositions do not get capital letters unless they start the title. For example:
