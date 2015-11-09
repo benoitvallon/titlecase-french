@@ -74,7 +74,8 @@ There different types of rules:
 - A title always starts with a word in uppercase
 - A specific list of words are in lowercase
 - After a quote *'* words can be in lowercase or uppercase depending of the word before the quote
-- Acronyms are in lower case
+- Acronyms are in lowercase
+- Uppercase with accent are replaced with their version without accent
 
 Some examples (see below for bigger list):
 
@@ -85,6 +86,7 @@ Du Vent dans les Branches
 Junior l'Aventurier
 Ca m'intéresse
 Avec S.A.M.
+Cet Eté à la Plage
 */
 ```
 
@@ -136,6 +138,11 @@ Avec S.A.M.
 
 - Words after the quote are in uppercase if the word before the quote is:
     - *d', l'*
+
+## Uppercase with accent
+
+- Replaced uppercase letter with accent are:
+    - *À, Â, Ä, É, È, Ê, Ë, Ç, Î, Ï, Ô, Ö, Û, Ü, Ù*
 
 # Samples of converted titles
 
