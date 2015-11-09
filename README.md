@@ -41,7 +41,7 @@ We add the 'démonstration' word to the list of words that must be "escaped".
 
 ```js
 var titleCaseFrench = require('titlecase-french');
-titleCaseFrench.addLowerCaseWords('demonstration');
+titleCaseFrench.addLowerCaseWords('démonstration');
 
 var myText = titleCaseFrench.convert('mon texte de démonstration');
 console.log(myText); // => Mon Texte de démonstration
