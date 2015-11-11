@@ -2,15 +2,15 @@
 
 [![Build Status](https://travis-ci.org/benoitvallon/titlecase-french.svg)](https://travis-ci.org/benoitvallon/titlecase-french)
 
-# What is title case?
+# What is Title Case?
 
-Basically it is using "Capital and Lowercase Letters in Title". This means only using capital letters for the principal words. Articles, conjunctions, and prepositions do not get capital letters unless they start the title. For example:
+Basically it is using "Capital and Lowercase Letters in Titles". This means only using capital letters for the principal words. Articles, conjunctions, and prepositions do not get capital letters unless they start the title. For example:
 
 - The Last of the Mohicans
 
 ## In English
 
-There are quite a few nice libraries to title case a text in English. This [implementation by John Resig](http://ejohn.org/blog/title-capitalization-in-javascript) is one of them and works well. In English, the first word in the title and all subsequent "important" words (everything except articles, conjunctions, and prepositions) are capitalized.
+There are quite a few nice libraries to Title Case a text in English. This [implementation by John Resig](http://ejohn.org/blog/title-capitalization-in-javascript) is one of them and works well. In English, the first word in the title and all subsequent "important" words (everything except articles, conjunctions, and prepositions) are capitalized.
 
 ## In French
 
@@ -47,7 +47,9 @@ If you do not want specific words to be capitalized then include them to the lis
 
 #### Signature
 
-`addLowerCaseWords(listOfWordsSeparatedByComma: String)`
+`addLowerCaseWords(words: String)`
+
+Where `words` is a list of words separated by Commas.
 
 #### Example
 
@@ -74,7 +76,9 @@ If you want to remove specific words from the default list (see words in the rul
 
 #### Signature
 
-`removeLowerCaseWords(listOfWordsSeparatedByComma: String)`
+`removeLowerCaseWords(words: String)`
+
+Where `words` is a list of words separated by Commas.
 
 #### Example
 
@@ -96,7 +100,9 @@ Sometimes you do not want to replace all the capitalized special letters. You ca
 
 #### Signature
 
-`keepCapitalizedSpecials(listOfCapitalizedSpecialLettersSeparatedByComma: String)`
+`keepCapitalizedSpecials(letters: String)`
+
+Where `letters` is a list of uppercase special letters separated by Commas.
 
 #### Example
 
@@ -116,7 +122,7 @@ npm test
 
 # The rules
 
-There are 5 main types of rules:
+There are 5 main rules:
 
 - A title always starts with a word in uppercase
 - A specific list of words are in lowercase
@@ -124,7 +130,7 @@ There are 5 main types of rules:
 - Acronyms are in uppercase
 - Special uppercase letters (with accent for example) are replaced with their simple version
 
-Some examples (see below for bigger list).
+Some examples ([see below for a bigger list](#samples-of-converted-titles)).
 
 ```js
 /*
@@ -180,10 +186,10 @@ Cet Eté à la Plage
 
 ## After a quote
 
-- Words after a quote are in lowercase if the word before the letter is:
+- Words after a quote are in lowercase if the word before the quote is:
     - *c', j', m', n', s', t'*
 
-- Words after a quote are in uppercase if the word before the letter is
+- Words after a quote are in uppercase if the word before the quote is:
     - *d', l'*
 
 ## Special uppercase letters
