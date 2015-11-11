@@ -89,15 +89,15 @@ npm test
 
 # The rules
 
-There different types of rules:
+There 5 main types of rules:
 
 - A title always starts with a word in uppercase
 - A specific list of words are in lowercase
 - After a quote *'* words can be in lowercase or uppercase depending of the word before the quote
-- Acronyms are in lowercase
-- Uppercase with accent are replaced with their version without accent
+- Acronyms are in uppercase
+- Special uppercase letters (with accent for example) are replaced with their simple version
 
-Some examples (see below for bigger list):
+Some examples (see below for bigger list).
 
 ```js
 /*
@@ -112,51 +112,51 @@ Cet Eté à la Plage
 
 ## List of lowercase words
 
-- Definite articles
+- Definite articles:
     - *le, la, les*
 
-- Indefinite articles
+- Indefinite articles:
     - *un, une, des*
 
-- Partitive articles
+- Partitive articles:
     - *du, de, des*
 
-- Contracted articles
+- Contracted articles:
     - *au, aux, du, des*
 
-- Demonstrative adjectives
+- Demonstrative adjectives:
     - *ce, cet, cette, ces*
 
-- Exclamative adjectives
+- Exclamative adjectives:
     - *quel, quels, quelle, quelles*
 
-- Possessive adjectives
+- Possessive adjectives:
     - *mon, ton, son, notre, votre, leur, ma, ta, sa, mes, tes, ses, nos, vos, leurs*
 
-- Coordinating conjunctions
+- Coordinating conjunctions:
     - *mais, ou, et, donc, or, ni, car, voire*
 
-- Subordinating conjunctions
+- Subordinating conjunctions:
     - *que, qu, quand, comme, si, lorsque, lorsqu, puisque, puisqu, quoique, quoiqu*
 
-- Prepositions
+- Prepositions:
     - *à, chez, dans, entre, jusque, jusqu, hors, par, pour, sans, vers, sur, pas, parmi, avec, sous, en*
 
-- Personal pronouns
+- Personal pronouns:
     - *je, tu, il, elle, on, nous, vous, ils, elles, me, te, se, y*
 
-- Relative pronouns
+- Relative pronouns:
     - *qui, que, quoi, dont, où*
 
-- Other words
+- Other words:
     - *ne*
 
 ## After a quote
 
-- Words after the quote are in lowercase if the word before the quote is:
+- Words after a quote are in lowercase if the word before the letter is:
     - *c', j', m', n', s', t'*
 
-- Words after the quote are in uppercase if the word before the quote is:
+- Words after a quote are in uppercase if the word before the letter is
     - *d', l'*
 
 ## Special uppercase letters
