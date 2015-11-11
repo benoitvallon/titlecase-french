@@ -386,5 +386,16 @@ module.exports = {
     {input: 'tata et tutu sont là', output: 'Tata et Tutu Sont Là'},
     {input: 'mon nouvau texte avec tata sans tutu', output: 'Mon Nouvau Texte avec Tata sans Tutu'},
     {input: 'Toto se rajoute à tutu et tata', output: 'Toto se Rajoute à Tutu et Tata'}
+  ],
+  keepCapitalizedSpecials: [
+    // Ç
+    {input: 'tu aimes ça', output: 'Tu Aimes Ça'},
+    {input: 'ça va ou bien', output: 'Ça Va ou Bien'},
+    // À
+    {input: 'à l\'eau', output: 'À l\'Eau'},
+    {input: 'lampe à pétrole', output: 'Lampe à Pétrole'},
+    // À
+    {input: 'l\'été indien', output: 'L\'Été Indien'},
+    {input: 'en avant vers les étoiles', output: 'En Avant vers les Étoiles'}
   ]
 };

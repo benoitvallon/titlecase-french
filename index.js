@@ -2,10 +2,12 @@
 
 var config = require('./config');
 
-function replaceCapitalizedAccent(text) {
+function replaceCapitalizedSpecials(text) {
   if (text) {
-    config.capitalizedAccents.forEach(function(capitalizedAccent){
-      text = text.replace(new RegExp(capitalizedAccent.input, 'g'), capitalizedAccent.output);
+    config.capitalizedSpecials.forEach(function(capitalizedSpecial){
+      if (!~config.removeCapitalizedSpecials.indexOf(capitalizedSpecial.input)) {
+        text = text.replace(new RegExp(capitalizedSpecial.input, 'g'), capitalizedSpecial.output);
+      }
     });
   }
   return text;
@@ -110,7 +112,7 @@ function capitalizeEachWord(text) {
 }
 
 module.exports.convert = function (text) {
-  return replaceCapitalizedAccent(capitalizeEachWord(text));
+  return replaceCapitalizedSpecials(capitalizeEachWord(text));
 };
 
 module.exports.addLowerCaseWords = function (words) {
@@ -128,4 +130,10 @@ module.exports.removeLowerCaseWords = function (words) {
       return true;
     }
   }).join(',');
+};
+
+module.exports.keepCapitalizedSpecials = function(letters) {
+  config.removeCapitalizedSpecials = letters.split(',').map(function(letter) {
+    return letter.trim();
+  });
 };

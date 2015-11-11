@@ -61,6 +61,26 @@ var myText = titleCaseFrench.convert('mon texte de démonstration');
 console.log(myText); // => Mon Texte De Démonstration
 ```
 
+### `keepCapitalizedSpecials`
+
+#### Description
+
+Sometimes you do not want to replace all the capitalized special letters. You can avoid replacement by declaring which letter you want to keep.
+
+#### Signature
+
+`keepCapitalizedSpecials(listOfCapitalizedSpecialLettersSeparatedByComma: String)`
+
+#### Example
+
+```js
+var titleCaseFrench = require('titlecase-french');
+titleCaseFrench.keepCapitalizedSpecials('À,Ç,É');
+
+var myText = titleCaseFrench.convert('ça va!');
+console.log(myText); // => Ça Va!
+```
+
 # Tests
 
 ```js
@@ -139,9 +159,9 @@ Cet Eté à la Plage
 - Words after the quote are in uppercase if the word before the quote is:
     - *d', l'*
 
-## Uppercase with accent
+## Special uppercase letters
 
-- Replaced uppercase letter with accent are:
+- All the following special uppercase letters are replaced:
     - *À, Â, Ä, É, È, Ê, Ë, Ç, Î, Ï, Ô, Ö, Û, Ü, Ù*
 
 # Samples of converted titles

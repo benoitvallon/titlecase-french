@@ -1,5 +1,5 @@
 module.exports = {
-  capitalizedAccents: [
+  capitalizedSpecials: [
     { input: 'À', output: 'A'},
     { input: 'Â', output: 'A'},
     { input: 'Ä', output: 'A'},
@@ -16,6 +16,7 @@ module.exports = {
     { input: 'Ü', output: 'U'},
     { input: 'Ù', output: 'U'}
   ],
+  removeCapitalizedSpecials : [],
   lowerCaseAfterQuoteAnd: ['c', 'j', 'm', 'n', 's', 't'],
   capitalizeAfterQuoteAnd: ['l', 'd'],
   lowerCaseWordList:

@@ -2,7 +2,6 @@ require('chai').should();
 var examples = require('./examples');
 var titleCaseFrench = require('../index');
 
-
 describe('titleCase-french', function() {
   it('should replace the definite articles (le,la,les,l\')', function() {
     examples.wordReplacementsDefiniteArticles.forEach(function(example) {
@@ -128,4 +127,17 @@ describe('titleCase-french', function() {
     });
   });
 
+  it('should not replace the removed capitalized specials "À,Ç,É"', function() {
+    // remove the words a first time with specific inconsistent writing
+    titleCaseFrench.keepCapitalizedSpecials(' À ,Ç , É ');
+    examples.keepCapitalizedSpecials.forEach(function(example) {
+      titleCaseFrench.convert(example.input).should.equal(example.output);
+    });
+
+    // remove the words a second time
+    titleCaseFrench.keepCapitalizedSpecials('À,Ç,É');
+    examples.keepCapitalizedSpecials.forEach(function(example) {
+      titleCaseFrench.convert(example.input).should.equal(example.output);
+    });
+  });
 });
