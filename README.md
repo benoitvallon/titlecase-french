@@ -116,7 +116,7 @@ npm test
 
 # The rules
 
-There 5 main types of rules:
+There are 5 main types of rules:
 
 - A title always starts with a word in uppercase
 - A specific list of words are in lowercase
