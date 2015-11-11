@@ -372,18 +372,24 @@ module.exports = {
     {input: 'tu aimes ça', output: 'Tu Aimes Ca'}
   ],
   withNewWords: [
+    // tutu
     {input: 'mon nouvau texte avec tutu', output: 'Mon Nouvau Texte avec tutu'},
     {input: 'tutu est arrivé', output: 'Tutu Est Arrivé'},
+    // toto
     {input: 'mon nouvau texte avec tutu et tata', output: 'Mon Nouvau Texte avec tutu et tata'},
     {input: 'tata et tutu sont là', output: 'Tata et tutu Sont Là'},
+    // tata
     {input: 'mon nouvau texte avec tata sans tutu', output: 'Mon Nouvau Texte avec tata sans tutu'},
     {input: 'Toto se rajoute à tutu et tata', output: 'Toto se Rajoute à tutu et tata'}
   ],
   withoutNewWords: [
+    // tutu
     {input: 'mon nouvau texte avec tutu', output: 'Mon Nouvau Texte avec Tutu'},
     {input: 'tutu est arrivé', output: 'Tutu Est Arrivé'},
+    // toto
     {input: 'mon nouvau texte avec tutu et tata', output: 'Mon Nouvau Texte avec Tutu et Tata'},
     {input: 'tata et tutu sont là', output: 'Tata et Tutu Sont Là'},
+    // tata
     {input: 'mon nouvau texte avec tata sans tutu', output: 'Mon Nouvau Texte avec Tata sans Tutu'},
     {input: 'Toto se rajoute à tutu et tata', output: 'Toto se Rajoute à Tutu et Tata'}
   ],
