@@ -28,6 +28,8 @@ npm install titlecase-french
 
 ## Basic usage
 
+You just need to require the package and call the `convert('mon texte de démonstration')` function.
+
 ```js
 var titleCaseFrench = require('titlecase-french');
 
@@ -35,11 +37,21 @@ var myText = titleCaseFrench.convert('mon texte de démonstration');
 console.log(myText); // => Mon Texte de Démonstration
 ```
 
-## Add or remove words
+## API
 
 ### `addLowerCaseWords`
 
-We add the 'démonstration' word to the list of words that must be "escaped".
+#### Description
+
+If you do not want specific words to be capitalized then include them to the list with the function.
+
+#### Signature
+
+`addLowerCaseWords(listOfWordsSeparatedByComma: String)`
+
+#### Example
+
+In the first example the 'démonstration' word is added to the list and won't be capitalized. In the second example both words 'démonstration' and 'texte' won't be capitalized.
 
 ```js
 var titleCaseFrench = require('titlecase-french');
@@ -47,15 +59,30 @@ titleCaseFrench.addLowerCaseWords('démonstration');
 
 var myText = titleCaseFrench.convert('mon texte de démonstration');
 console.log(myText); // => Mon Texte de démonstration
+
+titleCaseFrench.addLowerCaseWords('démonstration,texte');
+
+var myText = titleCaseFrench.convert('mon texte de démonstration');
+console.log(myText); // => Mon texte de démonstration
 ```
 
 ### `removeLowerCaseWords`
 
-Because 'de' is a word included in the default list, we can remove it from the list of words that must be "escaped".
+#### Description
+
+If you want to remove specific words from the default list (see words in the rules below) then call this function with your list of words.
+
+#### Signature
+
+`removeLowerCaseWords(listOfWordsSeparatedByComma: String)`
+
+#### Example
+
+In this example the 'de' word should have been in lowercase because it is in the default list of words that are not capitalized. We are going to remove it from the list to get it capitalized.
 
 ```js
 var titleCaseFrench = require('titlecase-french');
-titleCaseFrench.removeLowerCaseWords('de');
+titleCaseFrench.removeLowerCaseWords('de,du,la,la');
 
 var myText = titleCaseFrench.convert('mon texte de démonstration');
 console.log(myText); // => Mon Texte De Démonstration
