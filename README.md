@@ -126,7 +126,7 @@ There are 5 main rules:
 
 - A title always starts with a word in uppercase
 - A specific list of words are in lowercase
-- After a quote *'* words can be in lowercase or uppercase depending of the word before the quote
+- After an apostrophe *'* words can be in lowercase or uppercase depending of the word before the apostrophe
 - Acronyms are in uppercase
 - Special uppercase letters (with accent for example) are replaced with their simple version
 
@@ -184,12 +184,12 @@ Cet Eté à la Plage
 - Other words:
     - *ne*
 
-## After a quote
+## After an apostrophe
 
-- Words after a quote are in lowercase if the word before the quote is:
+- Words after an apostrophe are in lowercase if the word before the apostrophe is:
     - *c', j', m', n', s', t'*
 
-- Words after a quote are in uppercase if the word before the quote is:
+- Words after an apostrophe are in uppercase if the word before the apostrophe is:
     - *d', l'*
 
 ## Special uppercase letters
